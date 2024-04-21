@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Draggable Carousel Slider</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="star/style.css" />
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <span class="close slider-button" onclick="closeModal()">&times;</span>
+      <div class="swiper-modal-container">
+        <div class="swiper modal-swiper">
+          <div class="swiper-wrapper modal-swiper-wrapper">
+            <div class="swiper-slide modal-swiper-slide" onclick="closeModal()">
+              <img src="images/img-1.jpg" alt="img" draggable="false" />
+            </div>
+            <div class="swiper-slide modal-swiper-slide" onclick="closeModal()">
+              <img src="images/img-2.jpg " alt="img" draggable="false" />
+            </div>
+            <div class="swiper-slide modal-swiper-slide" onclick="closeModal()">
+              <img src="images/img-3.jpg" alt="img" draggable="false" />
+            </div>
+            <div class="swiper-slide modal-swiper-slide" onclick="closeModal()">
+              <img src="images/img-4.jpg" alt="img" draggable="false" />
+            </div>
+            <div class="swiper-slide modal-swiper-slide" onclick="closeModal()">
+              <img src="images/img-5.jpg" alt="img" draggable="false" />
+            </div>
+            <div class="swiper-slide modal-swiper-slide" onclick="closeModal()">
+              <img src="images/img-6.jpg" alt="img" draggable="false" />
+            </div>
+            <div class="swiper-slide modal-swiper-slide" onclick="closeModal()">
+              <img src="images/img-7.jpg" alt="img" draggable="false" />
+            </div>
+          </div>
+          <div class="modal-button-prev slider-button">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="modal-button-next slider-button">
+            <i id="right" class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <nav class="navbar"></nav>
+    </header>
+
+    <div class="wrapper">
+      <div class="container">
+        <div class="slider-wrapper">
+          <div class="pagination"></div>
+          <div class="swiper mySwiper">
+            <span class="counter">01/07</span>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" onclick="openModal()">
+                <img src="images/img-1.jpg" alt="img" draggable="false" />
+              </div>
+              <div class="swiper-slide" onclick="openModal()">
+                <img src="images/img-2.jpg" alt="img" draggable="false" />
+              </div>
+              <div class="swiper-slide" onclick="openModal()">
+                <img src="images/img-3.jpg" alt="img" draggable="false" />
+              </div>
+              <div class="swiper-slide" onclick="openModal()">
+                <img src="images/img-4.jpg" alt="img" draggable="false" />
+              </div>
+              <div class="swiper-slide" onclick="openModal()">
+                <img src="images/img-5.jpg" alt="img" draggable="false" />
+              </div>
+              <div class="swiper-slide" onclick="openModal()">
+                <img src="images/img-6.jpg" alt="img" draggable="false" />
+              </div>
+              <div class="swiper-slide" onclick="openModal()">
+                <img src="images/img-7.jpg" alt="img" draggable="false" />
+              </div>
+            </div>
+            <div class="button-prev slider-button">
+              <i id="left" class="fa-solid fa-angle-left"></i>
+            </div>
+            <div class="button-next slider-button">
+              <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="text-wrapper">
+          <div class="text-wrapper__top">
+            <h1 class="title">
+              BOLALAR UCHUN MONTESSORI YOG'OCH SORTER
+              O'YINCHOQLARI,RIVOJLANAYOTGAN MAGNIT BALIQ OVLASH
+            </h1>
+            <div class="divTable">
+              <div class="divTableBody">
+                <div class="divTableRow">
+                  <div class="divTableCell rates">
+                    <div class="stars-outer">
+                      <div class="stars-inner"></div>
+                    </div>
+                    <!-- <span class="number-rating"></span> -->
+                  </div>
+                  <div class="divTableCell discount">
+                    <div class="discount-precent">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 64 64"
+                        stroke-width="5"
+                        stroke="green"
+                        fill="none"
+                        width="25"
+                      >
+                        <path
+                          d="M46.84,15.43l1,3a4.43,4.43,0,0,0,1.75,2.31l2.53,1.7a4.47,4.47,0,0,1,1.66,5.37l-1,2.43a4.46,4.46,0,0,0,0,3.35l1,2.37a4.47,4.47,0,0,1-1.54,5.32L50,42.92a4.44,4.44,0,0,0-1.7,2.41l-.81,2.84a4.46,4.46,0,0,1-4.67,3.23l-2.43-.2a4.41,4.41,0,0,0-3.18,1l-2.34,1.89a4.47,4.47,0,0,1-5.65,0l-2-1.64a4.45,4.45,0,0,0-2.84-1H20.82a4.45,4.45,0,0,1-4.35-3.46l-.64-2.72A4.44,4.44,0,0,0,14,42.51L11.84,41a4.45,4.45,0,0,1-1.69-5.21l1-2.74a4.44,4.44,0,0,0,0-3.09l-.9-2.4A4.46,4.46,0,0,1,12,22.28l2.37-1.53a4.48,4.48,0,0,0,1.88-2.55l.7-2.52a4.47,4.47,0,0,1,4.69-3.25l2.24.19a4.48,4.48,0,0,0,3.19-1l2.13-1.72a4.48,4.48,0,0,1,5.67,0l1.86,1.56a4.44,4.44,0,0,0,3.2,1l2.35-.17A4.47,4.47,0,0,1,46.84,15.43Z"
+                        />
+                        <circle cx="26.44" cy="24.08" r="3.77" />
+                        <circle cx="37.94" cy="39.92" r="3.77" />
+                        <line x1="41.71" y1="22.19" x2="21.85" y2="42.06" />
+                      </svg>
+                      <span>50% tejaysiz</span>
+                    </div>
+                  </div>
+                  <div class="divTableCell">
+                    <div class="benefit">
+                      <span class="price">$40.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="divTableRow last">
+                  <div class="divTableCell">Sotildi <span>1235</span></div>
+                  <div class="divTableCell">Sharhlar <span>2347</span></div>
+                  <div class="divTableCell">Ko'rildi <span>10.124</span></div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="product-infos">
+              <div class="rates product-info">
+                <div class="stars-outer">
+                  <div class="stars-inner"></div>
+                </div>
+                <span class="number-rating"></span>
+              </div>
+              <span class="reviews product-info">
+                Sharhlar <span>2347</span>
+              </span>
+              <span class="reviews product-info">
+                Ko'rildi <span>10.124</span>
+              </span>
+            </div>
+            <div class="price product-infos">
+              <span class="solds product-info">Sotildi <span>1235</span></span>
+
+              <div class="discount-precent product-info">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 64 64"
+                  stroke-width="5"
+                  stroke="green"
+                  fill="none"
+                  width="25"
+                >
+                  <path
+                    d="M46.84,15.43l1,3a4.43,4.43,0,0,0,1.75,2.31l2.53,1.7a4.47,4.47,0,0,1,1.66,5.37l-1,2.43a4.46,4.46,0,0,0,0,3.35l1,2.37a4.47,4.47,0,0,1-1.54,5.32L50,42.92a4.44,4.44,0,0,0-1.7,2.41l-.81,2.84a4.46,4.46,0,0,1-4.67,3.23l-2.43-.2a4.41,4.41,0,0,0-3.18,1l-2.34,1.89a4.47,4.47,0,0,1-5.65,0l-2-1.64a4.45,4.45,0,0,0-2.84-1H20.82a4.45,4.45,0,0,1-4.35-3.46l-.64-2.72A4.44,4.44,0,0,0,14,42.51L11.84,41a4.45,4.45,0,0,1-1.69-5.21l1-2.74a4.44,4.44,0,0,0,0-3.09l-.9-2.4A4.46,4.46,0,0,1,12,22.28l2.37-1.53a4.48,4.48,0,0,0,1.88-2.55l.7-2.52a4.47,4.47,0,0,1,4.69-3.25l2.24.19a4.48,4.48,0,0,0,3.19-1l2.13-1.72a4.48,4.48,0,0,1,5.67,0l1.86,1.56a4.44,4.44,0,0,0,3.2,1l2.35-.17A4.47,4.47,0,0,1,46.84,15.43Z"
+                  />
+                  <circle cx="26.44" cy="24.08" r="3.77" />
+                  <circle cx="37.94" cy="39.92" r="3.77" />
+                  <line x1="41.71" y1="22.19" x2="21.85" y2="42.06" />
+                </svg>
+                <span>50% tejaysiz</span>
+              </div>
+              <div class="benefit product-info">
+                <s class="discount">$80.00</s>
+                <span class="price">$40.00</span>
+              </div>
+            </div> -->
+            <div class="left">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14 4.5C12.2402 4.5 11 5.88779 11 7.5H17C17 5.88779 15.7598 4.5 14 4.5ZM9.5 11.5V9H7.5V14.25C7.5 14.6642 7.16421 15 6.75 15C6.33578 15 6 14.6642 6 14.25V8.25V7.5H6.75H9.5C9.5 5.11221 11.3598 3 14 3C16.6402 3 18.5 5.11221 18.5 7.5H21.25H22V8.25V21.75C22 22.9926 20.9926 24 19.75 24H15.25C14.8358 24 14.5 23.6642 14.5 23.25C14.5 22.8358 14.8358 22.5 15.25 22.5H19.75C20.1642 22.5 20.5 22.1642 20.5 21.75V9H18.5V11.5H17V9H11V11.5H9.5ZM14.2738 18.0323C14.5667 17.7395 14.5667 17.2646 14.2738 16.9717C13.9809 16.6788 13.506 16.6788 13.2131 16.9717L7.99548 22.1893L5.78034 19.9742C5.48744 19.6813 5.01257 19.6813 4.71967 19.9741C4.42678 20.267 4.42677 20.7419 4.71966 21.0348L7.46513 23.7803C7.60579 23.921 7.79655 24 7.99547 24C8.19438 24 8.38515 23.921 8.5258 23.7803L14.2738 18.0323Z"
+                  fill="#141415"
+                ></path>
+              </svg>
+              <span> 118 ta qoldi</span>
+            </div>
+          </div>
+          <div class="text-wrapper__bottom">
+            <div class="buy button-wrap">
+              <button class="buy-button button">Sotib o'lish</button>
+            </div>
+            <div class="more button-wrap">
+              <button class="more-button button">Kategoriyaga o'tish</button>
+            </div>
+          </div>
+          <hr class="line" />
+        </div>
+        <div class="last-wrapper">
+          <div class="info-cards">
+            <div class="info-card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                fill="#000000"
+                version="1.1"
+                width="24px"
+                height="24px"
+                viewBox="0 0 305.002 305.002"
+                xml:space="preserve"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M152.502,0.001C68.412,0.001,0,68.412,0,152.501s68.412,152.5,152.502,152.5c84.089,0,152.5-68.411,152.5-152.5    S236.591,0.001,152.502,0.001z M152.502,280.001C82.197,280.001,25,222.806,25,152.501c0-70.304,57.197-127.5,127.502-127.5    c70.304,0,127.5,57.196,127.5,127.5C280.002,222.806,222.806,280.001,152.502,280.001z"
+                    />
+                    <path
+                      d="M218.473,93.97l-90.546,90.547l-41.398-41.398c-4.882-4.881-12.796-4.881-17.678,0c-4.881,4.882-4.881,12.796,0,17.678    l50.237,50.237c2.441,2.44,5.64,3.661,8.839,3.661c3.199,0,6.398-1.221,8.839-3.661l99.385-99.385    c4.881-4.882,4.881-12.796,0-17.678C231.269,89.089,223.354,89.089,218.473,93.97z"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <div class="info-card__text">
+                <h4 class="info-card__text__title">Xavfsiz to'lov</h4>
+                <p class="info-card__text__description">
+                  Barcha to'lovlar xavfsiz va ishonchli xovotirlanishga o'rin
+                  yo'q
+                </p>
+              </div>
+            </div>
+            <div class="info-card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                fill="#000000"
+                version="1.1"
+                width="24px"
+                height="24px"
+                viewBox="0 0 305.002 305.002"
+                xml:space="preserve"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M152.502,0.001C68.412,0.001,0,68.412,0,152.501s68.412,152.5,152.502,152.5c84.089,0,152.5-68.411,152.5-152.5    S236.591,0.001,152.502,0.001z M152.502,280.001C82.197,280.001,25,222.806,25,152.501c0-70.304,57.197-127.5,127.502-127.5    c70.304,0,127.5,57.196,127.5,127.5C280.002,222.806,222.806,280.001,152.502,280.001z"
+                    />
+                    <path
+                      d="M218.473,93.97l-90.546,90.547l-41.398-41.398c-4.882-4.881-12.796-4.881-17.678,0c-4.881,4.882-4.881,12.796,0,17.678    l50.237,50.237c2.441,2.44,5.64,3.661,8.839,3.661c3.199,0,6.398-1.221,8.839-3.661l99.385-99.385    c4.881-4.882,4.881-12.796,0-17.678C231.269,89.089,223.354,89.089,218.473,93.97z"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <div class="info-card__text">
+                <h4 class="info-card__text__title">
+                  O'zbekiston bo'ylab yetkazib berish
+                </h4>
+                <p class="info-card__text__description">
+                  O'zbekistonning barcha hududlariga yetkazib berish xizmati
+                  mavjud.
+                </p>
+              </div>
+            </div>
+            <div class="info-card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                fill="#000000"
+                version="1.1"
+                width="24px"
+                height="24px"
+                viewBox="0 0 305.002 305.002"
+                xml:space="preserve"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M152.502,0.001C68.412,0.001,0,68.412,0,152.501s68.412,152.5,152.502,152.5c84.089,0,152.5-68.411,152.5-152.5    S236.591,0.001,152.502,0.001z M152.502,280.001C82.197,280.001,25,222.806,25,152.501c0-70.304,57.197-127.5,127.502-127.5    c70.304,0,127.5,57.196,127.5,127.5C280.002,222.806,222.806,280.001,152.502,280.001z"
+                    />
+                    <path
+                      d="M218.473,93.97l-90.546,90.547l-41.398-41.398c-4.882-4.881-12.796-4.881-17.678,0c-4.881,4.882-4.881,12.796,0,17.678    l50.237,50.237c2.441,2.44,5.64,3.661,8.839,3.661c3.199,0,6.398-1.221,8.839-3.661l99.385-99.385    c4.881-4.882,4.881-12.796,0-17.678C231.269,89.089,223.354,89.089,218.473,93.97z"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <div class="info-card__text">
+                <h4 class="info-card__text__title">Ishonch</h4>
+                <p class="info-card__text__description">
+                  Himoya xaridingiz va shaxsiy ma'lumotlaringizni xavfsizligi
+                </p>
+              </div>
+            </div>
+            <div class="info-card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                fill="#000000"
+                version="1.1"
+                width="24px"
+                height="24px"
+                viewBox="0 0 305.002 305.002"
+                xml:space="preserve"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M152.502,0.001C68.412,0.001,0,68.412,0,152.501s68.412,152.5,152.502,152.5c84.089,0,152.5-68.411,152.5-152.5    S236.591,0.001,152.502,0.001z M152.502,280.001C82.197,280.001,25,222.806,25,152.501c0-70.304,57.197-127.5,127.502-127.5    c70.304,0,127.5,57.196,127.5,127.5C280.002,222.806,222.806,280.001,152.502,280.001z"
+                    />
+                    <path
+                      d="M218.473,93.97l-90.546,90.547l-41.398-41.398c-4.882-4.881-12.796-4.881-17.678,0c-4.881,4.882-4.881,12.796,0,17.678    l50.237,50.237c2.441,2.44,5.64,3.661,8.839,3.661c3.199,0,6.398-1.221,8.839-3.661l99.385-99.385    c4.881-4.882,4.881-12.796,0-17.678C231.269,89.089,223.354,89.089,218.473,93.97z"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <div class="info-card__text">
+                <h4 class="info-card__text__title">Ishonch telefonlari</h4>
+                <p class="info-card__text__description">
+                  Savolingiz bo'yicha veb-saytimizda ko'rsatilgan raqamlarga
+                  murojaat qilishingiz mumkin
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- starni js kodi -->
+    <script src="star/script.js"></script>
+
+    <script>
+      const modalSwiper = new Swiper(".modal-swiper", {
+        slidesPerView: 1,
+        loop: true,
+
+        navigation: {
+          nextEl: ".modal-button-next",
+          prevEl: ".modal-button-prev",
+        },
+      });
+
+      const slidesImage = [
+        "images/img-1.jpg",
+        "images/img-2.jpg",
+        "images/img-3.jpg",
+        "images/img-4.jpg",
+        "images/img-5.jpg",
+        "images/img-6.jpg",
+        "images/img-7.jpg",
+      ];
+
+      const paginations = document.querySelector(".pagination");
+
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        pagination: {
+          el: ".pagination",
+          clickable: true,
+
+          renderBullet: function (index, className) {
+            return `<div class="pagination-slide  pagination-slide-${index}"><img class="pagination-image" src="${slidesImage[index]}" ></div>`;
+          },
+        },
+
+        navigation: {
+          nextEl: ".button-next",
+          prevEl: ".button-prev",
+        },
+
+        zoom: {
+          maxRatio: 3,
+          minRatio: 1,
+        },
+      });
+
+      const paginationSlides = document.querySelectorAll(".pagination-slide");
+      const counter = document.querySelector(".counter");
+
+      function paginationScrollTo(paginationSlide) {
+        const itemRect = paginationSlide.getBoundingClientRect();
+        const containerRect = paginations.getBoundingClientRect();
+        const scrollOffset =
+          itemRect.top -
+          containerRect.top -
+          (containerRect.height - itemRect.height) / 5;
+
+        paginations.scrollTo({
+          top: paginations.scrollTop + scrollOffset,
+          behavior: "smooth",
+        });
+      }
+      paginationSlides.forEach(function (paginationSlide, index) {
+        if (!index) {
+          paginationSlide.classList.add("active");
+        }
+        paginationSlide.addEventListener("click", function () {
+          paginationScrollTo(paginationSlide);
+          swiper.slideTo(index);
+        });
+      });
+
+      swiper.on("slideChange", function (slide) {
+        counter.textContent = `0${slide.realIndex + 1}/0${
+          swiper.slides.length
+        }`;
+
+        paginationSlides.forEach(function (paginationSlide, index) {
+          paginationSlide.classList.remove("active");
+          if (index === slide.realIndex) {
+            paginationScrollTo(paginationSlide);
+            paginationSlide.classList.add("active");
+          }
+        });
+      });
+
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
