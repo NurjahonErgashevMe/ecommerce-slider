@@ -350,6 +350,7 @@
       const modalSwiper = new Swiper(".modal-swiper", {
         slidesPerView: 1,
         loop: true,
+        
 
         navigation: {
           nextEl: ".modal-button-next",
@@ -370,7 +371,7 @@
       const paginations = document.querySelector(".pagination");
 
       const swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
+        slidesPerView: "auto",
         spaceBetween: 0,
         pagination: {
           el: ".pagination",
